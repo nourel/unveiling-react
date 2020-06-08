@@ -16,14 +16,6 @@ class HelloWorld extends Component {
     console.log('HelloWorld Component Unmounted!')
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    if(nextProps.text === this.props.text) {
-      return false
-    }
-
-    return true
-  }
-
 
   render() {
     const { text } = this.props
