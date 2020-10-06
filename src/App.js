@@ -3,10 +3,12 @@ import logo from './logo.svg';
 import './App.css';
 import HelloWorld from './components/HelloWorld'
 
+// smart component
 class App extends Component {
   constructor() {
     super()
 
+    // default state
     this.state = {
       mountHelloWorld: false,
       helloWorldText: ''
@@ -27,7 +29,7 @@ class App extends Component {
           <button type="button" onClick={() => this.setState({helloWorldText: new Date().toString()})}>Update Component</button>
         </div>
         <div className="text">
-        {mountHelloWorld ? <HelloWorld text={helloWorldText}/> : null}
+        {mountHelloWorld ? <HelloWorld text={helloWorldText} /> : null}
         </div>
       </div>
     );
